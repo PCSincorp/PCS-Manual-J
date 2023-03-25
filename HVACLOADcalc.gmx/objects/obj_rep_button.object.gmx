@@ -3,7 +3,7 @@
   <spriteName>spr_rep_button</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,12 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x,y,obj_cursor)
+            <string>y=view_yview[0]
+
+if place_meeting(x,y,obj_cursor)
 {
 image_index=1
 if mouse_check_button(mb_left)
 {
-if !room=report then room_goto(report)
+room_goto(report)
 }
 }
 if !place_meeting(x,y,obj_cursor)

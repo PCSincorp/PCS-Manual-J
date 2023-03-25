@@ -5,6 +5,7 @@
   </Configs>
   <NewExtensions>
     <extension index="0">extensions\WinDev</extension>
+    <extension index="1">extensions\javafunctions</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -14,7 +15,9 @@
     <sprite>sprites\spr_message_half</sprite>
     <sprite>sprites\spr_CI_button</sprite>
     <sprite>sprites\spr_rep_button</sprite>
+    <sprite>sprites\spr_rooms_button</sprite>
     <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_print_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -51,6 +54,8 @@
     <objects name="Buttons">
       <object>objects\obj_CI_button</object>
       <object>objects\obj_rep_button</object>
+      <object>objects\obj_rms_button</object>
+      <object>objects\obj_print_button</object>
     </objects>
     <objects name="reportobjects">
       <object>objects\obj_customer_info</object>
@@ -60,6 +65,7 @@
   <rooms name="rooms">
     <room>rooms\Information</room>
     <room>rooms\report</room>
+    <room>rooms\rmbuild</room>
     <room>rooms\rm_test</room>
   </rooms>
   <constants number="2">
