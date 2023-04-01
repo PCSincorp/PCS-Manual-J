@@ -3,9 +3,27 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="3" name="datafiles">
+    <datafile>
+      <name>print.html</name>
+      <exists>-1</exists>
+      <size>138</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>105553694031980</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>print.html</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions>
     <extension index="0">extensions\WinDev</extension>
-    <extension index="1">extensions\javafunctions</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -21,6 +39,8 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -28,10 +48,10 @@
     <script>scripts\hex_to_real.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\fnt_test</font>
+    <font>fonts\fnt_Arial</font>
+    <font>fonts\fnt_Arial_bold</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_test</object>
     <objects name="companyobjs">
       <object>objects\obj_company_name</object>
       <object>objects\obj_comp_email</object>
@@ -61,6 +81,7 @@
       <object>objects\obj_customer_info</object>
       <object>objects\obj_company_info</object>
     </objects>
+    <object>objects\obj_pagemarker</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Information</room>

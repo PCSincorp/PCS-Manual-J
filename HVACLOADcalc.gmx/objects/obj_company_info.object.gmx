@@ -25,15 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x+800, y, "Date " + string(current_month) + "/" + string (current_day) + "/" + string(current_year)); 
+            <string>draw_set_font(fnt_Arial)
 
-draw_text(x,y,"Company Information:")
+draw_text(x+800, y, "Date " + string(current_month) + "/" + string (current_day) + "/" + string(current_year)); 
+draw_set_font(fnt_Arial_bold)
+draw_text(x,y,"Company:")
+draw_set_font(fnt_Arial)
 draw_text(x, y+20, global.compname);
 draw_text(x, y+40, global.compaddress);
 draw_text(x, y+60, global.compcity + " ," + global.custstate);
 draw_text(x, y+80,"Zip " + global.compzip);
 draw_text(x, y+100,"Phone: " + global.compphone);
 draw_text(x, y+120,"Email: " + global.compemail);
+
+draw_text(30,1290,"Page 1")
+draw_text(30,2600,"Page 2")
 </string>
           </argument>
         </arguments>

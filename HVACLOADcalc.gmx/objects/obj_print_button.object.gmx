@@ -25,13 +25,54 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//path = environment_get_variable("APPDATA") + "\Local\" + "PCSloads";
+            <string>if (true) {
+    // use game_save_id on current versions of GMS
+    game_save_path = game_save_id;
+    // remove the trailing slash (if any):
+    switch (string_char_at(game_save_path, string_length(game_save_path))) {
+        case "/": case "\":
+            game_save_path = string_copy(game_save_path, 1, string_length(game_save_path) - 1);
+            break;
+        default:
+    }
+} else {
+    // discover the save directory manually on older versions of GMS
+    var gid = "HVACLOADcalc"; // project name
+    game_save_path = environment_get_variable("LOCALAPPDATA") + "\" + gid;
+}
 
-//file=""
-//shell_do("mkdir","c:\PCSloads")
+ file_copy("print.html", game_save_path + "\printtemp.html");
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>shell_execute(game_save_path + "\printtemp.html",0)
+obj_CI_button.visible=1
+obj_rep_button.visible=1
+obj_rms_button.visible=1
+visible=1
 
-
-
+//    view_visible[0] = true;
+//    view_visible[1] = false;
+    
 </string>
           </argument>
         </arguments>
@@ -54,7 +95,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//shell_do("print",path + file);
+            <string>surf = surface_create(room_width, room_height);
+surface_set_target(surf);
+
+var tiles = tile_get_ids();
+for(var i = 0; i &lt; array_length_1d(tiles); i++){
+    draw_background_part(tile_get_background(tiles[i]), tile_get_left(tiles[i]), tile_get_top(tiles[i]), tile_get_width(tiles[i]), tile_get_height(tiles[i]), tile_get_x(tiles[i]), tile_get_y(tiles[i]));
+        
+}
+
+with obj_company_info event_perform(ev_draw,0)
+with obj_customer_info event_perform(ev_draw,0)
+
+var _w = surface_get_width(surf);
+var _h = surface_get_height(surf);
+
+
+resultSprite = sprite_create_from_surface(surf, 0, 0, _w, _h, 0, 1, 0, 0);
+sprite_save(resultSprite, 0, "temp.png");
+
+surface_reset_target();
+
+
+
+alarm[1]=5
 </string>
           </argument>
         </arguments>
@@ -84,15 +148,15 @@ if place_meeting(x,y,obj_cursor)
 image_index=1
 if mouse_check_button(mb_left)
 {
-j_print()
-//file = path + "\temp.jpg"
-//   screen_save(file);
-//    file = get_save_filename_ext("image|*.png","ManJ",program_directory,"Files");
-//    if file != ""
-//    {
-//    screen_save(file);
-//    }    
-//alarm[0]=10 
+obj_CI_button.visible=0
+obj_rep_button.visible=0
+obj_rms_button.visible=0
+visible=0
+//    view_visible[0] = false;
+//    view_visible[1] = true;
+    
+ 
+alarm[0]=5
 
 
 }

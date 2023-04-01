@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--- scripts, functions go here --->
+<style media="print">
+    @page 
+    {
+        size: auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+    }
+
+    body 
+    {
+    
+        margin: 0px;  /* this affects the margin on the content before sending to printer */
+   }
+</style>
+
+<script>
+function hideButton(x)
+ {
+  x.style.display = 'none';
+ }
+</script>
+
+<head>
+
+<body>
+<!--- page display code goes here, like the loop --->
+<button onclick="hideButton(this);window.print()">Print this page</button>
+<body style="background-color:black">
+
+
+<img src="temp.png" style="width:100%;height:100%;">
+
+</body>
+</html>
+
