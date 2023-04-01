@@ -36,6 +36,7 @@
     <sprite>sprites\spr_rooms_button</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_print_button</sprite>
+    <sprite>sprites\spr_logo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -80,6 +81,7 @@
     <objects name="reportobjects">
       <object>objects\obj_customer_info</object>
       <object>objects\obj_company_info</object>
+      <object>objects\obj_logo</object>
     </objects>
     <object>objects\obj_pagemarker</object>
   </objects>

@@ -103,7 +103,7 @@ for(var i = 0; i &lt; array_length_1d(tiles); i++){
     draw_background_part(tile_get_background(tiles[i]), tile_get_left(tiles[i]), tile_get_top(tiles[i]), tile_get_width(tiles[i]), tile_get_height(tiles[i]), tile_get_x(tiles[i]), tile_get_y(tiles[i]));
         
 }
-
+with obj_logo event_perform(ev_draw,0)
 with obj_company_info event_perform(ev_draw,0)
 with obj_customer_info event_perform(ev_draw,0)
 
