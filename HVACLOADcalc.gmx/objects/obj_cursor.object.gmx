@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>obj=0
+</string>
           </argument>
         </arguments>
       </action>
@@ -50,6 +51,7 @@
             <string>x=mouse_x
 y=mouse_y
 view_yview = max(0, min(view_yview, room_height - view_hview))
+
 </string>
           </argument>
         </arguments>

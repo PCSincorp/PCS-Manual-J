@@ -28,12 +28,15 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_message</sprite>
+    <sprite>sprites\spr_roomwindow</sprite>
     <sprite>sprites\spr_email</sprite>
     <sprite>sprites\spr_message_3Q</sprite>
     <sprite>sprites\spr_message_half</sprite>
     <sprite>sprites\spr_CI_button</sprite>
     <sprite>sprites\spr_rep_button</sprite>
     <sprite>sprites\spr_rooms_button</sprite>
+    <sprite>sprites\spr_whitevlock</sprite>
+    <sprite>sprites\spr_addroom</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_print_button</sprite>
     <sprite>sprites\spr_logo</sprite>
@@ -50,6 +53,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_Arial</font>
+    <font>fonts\fnt_arial8</font>
     <font>fonts\fnt_Arial_bold</font>
   </fonts>
   <objects name="objects">
@@ -76,6 +80,7 @@
       <object>objects\obj_CI_button</object>
       <object>objects\obj_rep_button</object>
       <object>objects\obj_rms_button</object>
+      <object>objects\obj_addroom_button</object>
       <object>objects\obj_print_button</object>
     </objects>
     <objects name="reportobjects">
@@ -84,6 +89,10 @@
       <object>objects\obj_logo</object>
     </objects>
     <object>objects\obj_pagemarker</object>
+    <objects name="roomobjs">
+      <object>objects\obj_roomwindow</object>
+      <object>objects\onj_block</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Information</room>
