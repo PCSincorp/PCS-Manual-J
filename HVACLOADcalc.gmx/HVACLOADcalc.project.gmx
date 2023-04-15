@@ -32,24 +32,39 @@
     <sprite>sprites\spr_email</sprite>
     <sprite>sprites\spr_message_3Q</sprite>
     <sprite>sprites\spr_message_half</sprite>
-    <sprite>sprites\spr_CI_button</sprite>
-    <sprite>sprites\spr_rep_button</sprite>
-    <sprite>sprites\spr_rooms_button</sprite>
     <sprite>sprites\spr_whitevlock</sprite>
-    <sprite>sprites\spr_addroom</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_print_button</sprite>
     <sprite>sprites\spr_logo</sprite>
+    <sprites name="rm_sprs">
+      <sprite>sprites\spr_m_1</sprite>
+      <sprite>sprites\spr_rm_2</sprite>
+      <sprite>sprites\spr_rm_3</sprite>
+      <sprite>sprites\spr_rm_4</sprite>
+      <sprite>sprites\spr_rm_5</sprite>
+      <sprite>sprites\spr_rm_6</sprite>
+      <sprite>sprites\spr_rm_7</sprite>
+      <sprite>sprites\spr_rm_8</sprite>
+      <sprite>sprites\spr_rm_9</sprite>
+    </sprites>
+    <sprites name="button_sprs">
+      <sprite>sprites\spr_rep_button</sprite>
+      <sprite>sprites\spr_CI_button</sprite>
+      <sprite>sprites\spr_rooms_button</sprite>
+    </sprites>
+    <sprite>sprites\spr_close</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
     <background>background\background2</background>
+    <background>background\bg_folder</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\draw_tbutton.gml</script>
+    <script>scripts\button_draw.gml</script>
     <script>scripts\hex_to_real.gml</script>
+    <script>scripts\input_box.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_Arial</font>
@@ -80,7 +95,6 @@
       <object>objects\obj_CI_button</object>
       <object>objects\obj_rep_button</object>
       <object>objects\obj_rms_button</object>
-      <object>objects\obj_addroom_button</object>
       <object>objects\obj_print_button</object>
     </objects>
     <objects name="reportobjects">
@@ -92,12 +106,27 @@
     <objects name="roomobjs">
       <object>objects\obj_roomwindow</object>
       <object>objects\onj_block</object>
+      <object>objects\obj_rm_1</object>
+      <object>objects\obj_rm_2</object>
+      <object>objects\obj_rm_3</object>
+      <object>objects\obj_rm_4</object>
+      <object>objects\obj_rm_5</object>
+      <object>objects\obj_rm_6</object>
+      <object>objects\obj_rm_7</object>
+      <object>objects\obj_rm_8</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Information</room>
     <room>rooms\report</room>
-    <room>rooms\rmbuild</room>
+    <room>rooms\rm_1</room>
+    <room>rooms\rm_2</room>
+    <room>rooms\rm_3</room>
+    <room>rooms\rm_4</room>
+    <room>rooms\rm_5</room>
+    <room>rooms\rm_6</room>
+    <room>rooms\rm_7</room>
+    <room>rooms\rm_8</room>
     <room>rooms\rm_test</room>
   </rooms>
   <constants number="2">

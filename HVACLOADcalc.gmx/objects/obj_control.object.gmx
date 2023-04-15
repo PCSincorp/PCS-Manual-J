@@ -33,7 +33,75 @@ globalvar roomct;
 roomct=0;
 globalvar activewindow;
 activewindow=0;
+globalvar returnval;
+returnval=0;
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+if !file_exists("compdata.ini")
+{
+ini_open("compdata.ini");
+ini_write_string("Company", "name", "");
+ini_write_string("Company", "email", "");
+ini_write_string("Company", "address", "");
+ini_write_string("Company", "city", "");
+ini_write_string("Company", "state", "");
+ini_write_string("Company", "zip", "");
+ini_write_string("Company", "phone", "");
+ini_close();
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if room=rm_1 then draw_text(58,34,"Room 1")
+if room=rm_2 then draw_text(58,34,"Room 2")
+if room=rm_3 then draw_text(58,34,"Room 3")
+if room=rm_4 then draw_text(58,34,"Room 4")
+if room=rm_5 then draw_text(58,34,"Room 5")
+if room=rm_6 then draw_text(58,34,"Room 6")
+if room=rm_7 then draw_text(58,34,"Room 7")
+if room=rm_8 then draw_text(58,34,"Room 8")
 </string>
           </argument>
         </arguments>

@@ -3,7 +3,7 @@
   <spriteName>spr_print_button</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-50</depth>
+  <depth>-1501</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -68,6 +68,7 @@
 obj_CI_button.visible=1
 obj_rep_button.visible=1
 obj_rms_button.visible=1
+onj_block.visible=1
 visible=1
 
 //    view_visible[0] = true;
@@ -151,6 +152,7 @@ if mouse_check_button(mb_left)
 obj_CI_button.visible=0
 obj_rep_button.visible=0
 obj_rms_button.visible=0
+onj_block.visible=0
 visible=0
 //    view_visible[0] = false;
 //    view_visible[1] = true;

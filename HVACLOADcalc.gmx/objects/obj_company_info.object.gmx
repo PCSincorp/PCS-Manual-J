@@ -33,7 +33,7 @@ draw_text(x,y,"Company:")
 draw_set_font(fnt_Arial)
 draw_text(x, y+20, global.compname);
 draw_text(x, y+40, global.compaddress);
-draw_text(x, y+60, global.compcity + " ," + global.custstate);
+draw_text(x, y+60, global.compcity + " ," + global.compstate);
 draw_text(x, y+80,"Zip " + global.compzip);
 draw_text(x, y+100,"Phone: " + global.compphone);
 draw_text(x, y+120,"Email: " + global.compemail);

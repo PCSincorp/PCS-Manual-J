@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=0
+            <string>click=0
+image_index=0
 image_speed=0
 thisguy=instance_id
 pressed=0
@@ -37,7 +38,7 @@ ondelete=0
 //ontop=0
 mx=0
 my=0
-
+over=0
 //newx+=32
 newy+=32
 //x=newx
@@ -46,12 +47,15 @@ y=newy
 
 cursor = "";
 delay1 = 20;
-//alarm[0] = delay1;
-
 message = "";
+message2 = "";
+message3 = "";
 ret=0;
 roomname = string(message);
+width = string(message);
+
 selected=0;
+
 </string>
           </argument>
         </arguments>
@@ -210,12 +214,6 @@ ondelete=1
 }
 else { ondelete=0 }
 
-//if mouse_x&gt;x &amp;&amp; mouse_x&lt;x+16 &amp;&amp; mouse_y&gt;y &amp;&amp; mouse_y&lt;y+24
-//{
-//onhead=1
-//} else { onhead=0 }
-
-
 
 if mouse_x&gt;x+232 &amp;&amp; mouse_x&lt;x+256 &amp;&amp; mouse_y&gt;y+232 &amp;&amp; mouse_y&lt;y+256
 {
@@ -236,7 +234,11 @@ if windowactive=0 then windowactive=1
 }
 else
 {
-if mouse_check_button(mb_left)=1 &amp;&amp; mouse_x&lt;16
+if mouse_check_button(mb_left)=1 &amp;&amp; mouse_x&lt;16 
+{
+if windowactive=1 then windowactive=0
+}
+if mouse_check_button(mb_left)=1 &amp;&amp; mouse_x&gt;256
 {
 if windowactive=1 then windowactive=0
 }
@@ -251,6 +253,9 @@ instance_destroy()
 
 
 // room name 54x,6y - 181x,19y
+if windowactive=1
+{
+// room name
 if mouse_x&gt;x+56 &amp;&amp; mouse_x&lt;x+181&amp;&amp; mouse_y&gt;y+6 &amp;&amp; mouse_y&lt;y+19
 {
 if mouse_check_button(mb_left)
@@ -260,6 +265,18 @@ selected=1
 keyboard_string = roomname
 }
 }
+// width selected=2
+if mouse_x&gt;x+56 &amp;&amp; mouse_x&lt;x+181&amp;&amp; mouse_y&gt;y+32 &amp;&amp; mouse_y&lt;y+45
+{
+if mouse_check_button(mb_left)
+{
+alarm[0] = delay1
+selected=2
+keyboard_string = roomname
+}
+}
+
+
 if !place_meeting(x,y,obj_cursor)
 {
 if mouse_check_button(mb_left)
@@ -269,6 +286,8 @@ selected=0
 roomname = string(message)
 }
 }
+
+// room name entry
 if selected=1
 {
 if (string_width(keyboard_string)&lt;135) 
@@ -278,7 +297,23 @@ else
 }
 if keyboard_check(vk_enter)
 {
+cursor = ""
 roomname = string(message)
+alarm[0] = -1
+selected=0
+}
+// width entry
+if selected=2
+{
+if (string_width(keyboard_string)&lt;135) 
+ message2 = keyboard_string;
+else
+ keyboard_string = message2;
+}
+if keyboard_check(vk_enter)
+{
+cursor = ""
+width = string(message2)
 alarm[0] = -1
 selected=0
 }
@@ -287,6 +322,7 @@ selected=0
 
 
 
+}
 </string>
           </argument>
         </arguments>
@@ -313,6 +349,7 @@ selected=0
 //draw_text(x+4,y+8,string(thiswindow))
 draw_set_font(fnt_arial8)
 draw_set_colour(c_black)
+// room name
 if windowactive=0 then draw_text_transformed(x+56,y+13,roomname,0.9,0.9,0);
 if windowactive=1
 { 
@@ -320,7 +357,13 @@ draw_set_colour(c_white)
 draw_rectangle(x+54,y+5,x+180,y+20,0)
 draw_set_colour(c_black)
 draw_rectangle(x+54,y+5,x+180,y+20,1)
-draw_text_transformed(x+56, y+13, message + cursor,0.9,0.9,0);
+// room name
+if selected=1 then draw_text_transformed(x+56, y+13, message + cursor,0.9,0.9,0);
+
+if selected=2 then draw_text_transformed(x+56, y+32, message2 + cursor,0.9,0.9,0);
+
+
+
 }
 </string>
           </argument>

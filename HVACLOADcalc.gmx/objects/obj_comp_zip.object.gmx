@@ -28,11 +28,24 @@
             <string>cursor = "|";
 delay1 = 20;
 alarm[0] = delay1;
-
-message = "";
 ret=0;
-global.compzip = string(message);
 selected=0;
+
+if file_exists("compdata.ini")
+{
+ini_open("compdata.ini");
+if ini_key_exists("Company", "zip")
+{
+global.compzip = ini_read_string("Company", "zip", "");
+message = global.compzip;
+}
+ini_close();
+}
+else
+{
+message = "";
+global.compzip = string(message);
+}
 </string>
           </argument>
         </arguments>
@@ -93,6 +106,9 @@ if mouse_check_button(mb_left)
 {
 selected=0
 global.compzip = string(message)
+ini_open("compdata.ini");
+ini_write_string("Company", "zip", global.compzip);
+ini_close();
 }
 }
 
@@ -108,6 +124,9 @@ else
 if keyboard_check(vk_enter)
 {
 global.compzip = string(message)
+ini_open("compdata.ini");
+ini_write_string("Company", "zip", global.compzip);
+ini_close();
 selected=0
 }
 

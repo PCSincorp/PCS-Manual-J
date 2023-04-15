@@ -29,10 +29,25 @@
 delay1 = 20;
 alarm[0] = delay1;
 
-message = "";
+
 ret=0;
-global.compname = string(message);
+
 selected=0;
+if file_exists("compdata.ini")
+{
+ini_open("compdata.ini");
+if ini_key_exists("Company", "name")
+{
+global.compname = ini_read_string("Company", "name", "");
+message = global.compname;
+}
+ini_close();
+}
+else
+{
+message = "";
+global.compname = string(message);
+}
 </string>
           </argument>
         </arguments>
@@ -93,6 +108,9 @@ if mouse_check_button(mb_left)
 {
 selected=0
 global.compname = string(message)
+ini_open("compdata.ini");
+ini_write_string("Company", "name", global.compname);
+ini_close();
 }
 }
 
@@ -108,7 +126,11 @@ else
 if keyboard_check(vk_enter)
 {
 global.compname = string(message)
+ini_open("compdata.ini");
+ini_write_string("Company", "name", global.compname);
+ini_close();
 selected=0
+
 }
 
 

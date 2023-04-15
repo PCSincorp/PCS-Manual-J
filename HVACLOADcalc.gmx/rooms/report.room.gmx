@@ -7,7 +7,7 @@
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <colour>16777215</colour>
   <showcolour>-1</showcolour>
   <code></code>
@@ -53,15 +53,23 @@
   <instances>
     <instance objName="obj_control" x="0" y="0" name="inst_6F02239D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_CI_button" x="0" y="0" name="inst_772A4E1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rep_button" x="864" y="0" name="inst_42E1DE35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rep_button" x="832" y="0" name="inst_42E1DE35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_customer_info" x="640" y="128" name="inst_66C9CD5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cursor" x="0" y="64" name="inst_93541768" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_company_info" x="64" y="128" name="inst_51FBB0F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rms_button" x="128" y="0" name="inst_621EFC23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_print_button" x="992" y="0" name="inst_BD3CDF44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rms_button" x="32" y="0" name="inst_621EFC23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_print_button" x="960" y="0" name="inst_BD3CDF44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pagemarker" x="0" y="1312" name="inst_68F2726E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pagemarker" x="0" y="1344" name="inst_293B6689" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_logo" x="64" y="32" name="inst_CF24C648" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="onj_block" x="0" y="0" name="inst_9734FF4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="onj_block" x="128" y="0" name="inst_D409658F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="onj_block" x="256" y="0" name="inst_E2A6394B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="onj_block" x="384" y="0" name="inst_DBCE8A57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="onj_block" x="512" y="0" name="inst_82F7B668" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="onj_block" x="640" y="0" name="inst_F42D7E69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="onj_block" x="768" y="0" name="inst_5305324D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="onj_block" x="896" y="0" name="inst_A330BB1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background2" x="0" y="0" w="32" h="32" xo="0" yo="0" id="10000001" name="inst_E54086CE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
